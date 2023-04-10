@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-Widget navBar (BuildContext context){
-  return BottomNavigationBar(//Transformar em um widget em si.
+class NavBar extends StatelessWidget{
+  const NavBar({super.key});
+
+  @override
+  Widget build(BuildContext context){
+  return BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home,color: Color(0xff6c4848)),
-            backgroundColor: Color(0xffffb3b3),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -21,4 +24,5 @@ Widget navBar (BuildContext context){
             label: 'Minha Conta',
           )
         ]);
+}
 }
