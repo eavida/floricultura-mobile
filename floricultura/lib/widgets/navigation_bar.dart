@@ -12,19 +12,19 @@ class NavBar extends StatelessWidget{
       type: BottomNavigationBarType.fixed,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home,color: Color(0xff6c4848)),
+          icon: Icon(Icons.home,color: Color(0xff6c4848), size: 30),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search,color: Color(0xff6c4848)),
+          icon: Icon(Icons.search,color: Color(0xff6c4848), size: 30),
           label: 'Procurar',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart,color: Color(0xff6c4848)),
+          icon: Icon(Icons.shopping_cart,color: Color(0xff6c4848), size: 30),
           label: 'Carrinho',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle,color: Color(0xff6c4848)),
+          icon: Icon(Icons.account_circle,color: Color(0xff6c4848), size: 30),
           label: 'Minha Conta',
         )
       ]);

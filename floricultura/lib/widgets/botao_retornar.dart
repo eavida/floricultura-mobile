@@ -13,11 +13,12 @@ class Retornar extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               backgroundColor: const Color(0xffffb3b3),
-              minimumSize: const Size(42, 42),
+              minimumSize: const Size(50, 50),
             ),
             child: const Icon(
               Icons.arrow_back,
               color: Color(0xff6c4848),
+              size: 30,
             )));
   }
 }
