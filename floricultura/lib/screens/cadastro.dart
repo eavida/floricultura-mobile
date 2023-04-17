@@ -35,12 +35,12 @@ class Cadastro extends StatelessWidget {
                   children: [
                     Row(
                       children: const <Widget>[
-                        Flexible(child: CampoNome()),
-                        Flexible(child: CampoSobrenome())
+                        Flexible(child: CampoNome(isEditable: true)),
+                        Flexible(child: CampoSobrenome(isEditable: true))
                       ],
                     ),
-                    const CampoEmail(),
-                    const CampoSenha(),
+                    const CampoEmail(isEditable: true),
+                    const CampoSenha(isEditable: true),
                     const AcessoBotao(text: 'Registrar'),
                     const RedirecionarLogin()
                   ],

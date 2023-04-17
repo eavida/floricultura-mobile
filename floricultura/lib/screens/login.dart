@@ -30,8 +30,8 @@ class LoginScreen extends StatelessWidget {
                     child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    CampoEmail(),
-                    CampoSenha(),
+                    CampoEmail(isEditable: true),
+                    CampoSenha(isEditable: true),
                     AcessoBotao(text: 'Login'),
                     RedirecionarCadastro(),
                   ],

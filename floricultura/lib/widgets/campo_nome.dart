@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CampoNome extends StatelessWidget {
-  const CampoNome({super.key});
+class CampoNome extends StatefulWidget {
+  final bool isEditable;
+  const CampoNome({Key? key, required this.isEditable}) : super(key: key);
+
+  @override
+  _CampoNomeState createState() => _CampoNomeState();
+
+}
+
+class _CampoNomeState extends State<CampoNome>{
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +21,9 @@ class CampoNome extends StatelessWidget {
               color: const Color(0xfff4f4f4),
               border: Border.all(color: const Color(0xffC7C7C7)),
               borderRadius: BorderRadius.circular(12)),
-          child: const TextField(
-              decoration: InputDecoration(
+          child: TextField(
+              enabled: widget.isEditable,
+              decoration: const InputDecoration(
             border: InputBorder.none,
             hintText: 'Nome',
           )),
