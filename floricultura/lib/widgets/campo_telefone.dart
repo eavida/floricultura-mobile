@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class CampoEmail extends StatefulWidget {
+class CampoTelefone extends StatefulWidget {
   final bool isEditable;
   final TextEditingController? controller;
-  const CampoEmail({Key? key, required this.isEditable, this.controller})
+  const CampoTelefone({Key? key, required this.isEditable, this.controller})
       : super(key: key);
 
   @override
-  _CampoEmailState createState() => _CampoEmailState();
+  _CampoTelefoneState createState() => _CampoTelefoneState();
 }
 
-class _CampoEmailState extends State<CampoEmail> {
+class _CampoTelefoneState extends State<CampoTelefone> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,9 +29,9 @@ class _CampoEmailState extends State<CampoEmail> {
           enabled: widget.isEditable,
           decoration: const InputDecoration(
             border: InputBorder.none,
-            hintText: 'Email',
+            hintText: 'Telefone',
           ),
-          keyboardType: TextInputType.emailAddress,
+          keyboardType: TextInputType.phone,
         ),
       ),
     );

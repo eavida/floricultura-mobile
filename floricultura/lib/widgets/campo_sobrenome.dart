@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class CampoEmail extends StatefulWidget {
+class CampoSobrenome extends StatefulWidget {
   final bool isEditable;
   final TextEditingController? controller;
-  const CampoEmail({Key? key, required this.isEditable, this.controller})
+  const CampoSobrenome({Key? key, required this.isEditable, this.controller})
       : super(key: key);
 
   @override
-  _CampoEmailState createState() => _CampoEmailState();
+  _CampoSobrenomeState createState() => _CampoSobrenomeState();
 }
 
-class _CampoEmailState extends State<CampoEmail> {
+class _CampoSobrenomeState extends State<CampoSobrenome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.fromLTRB(4, 0, 0, 8),
       child: Container(
         padding: const EdgeInsets.only(left: 20),
         decoration: BoxDecoration(
@@ -29,9 +29,8 @@ class _CampoEmailState extends State<CampoEmail> {
           enabled: widget.isEditable,
           decoration: const InputDecoration(
             border: InputBorder.none,
-            hintText: 'Email',
+            hintText: 'Sobrenome',
           ),
-          keyboardType: TextInputType.emailAddress,
         ),
       ),
     );

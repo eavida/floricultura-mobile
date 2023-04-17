@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../screens/cadastro.dart';
+import '../screens/login.dart';
 
-class RedirecionarCadastro extends StatelessWidget {
-  const RedirecionarCadastro({super.key});
+class RedirecionarLogin extends StatelessWidget {
+  const RedirecionarLogin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class RedirecionarCadastro extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         const Text(
-          'Não possui uma conta?',
+          'Já é usuário?',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Color(0xbb6c4848),
@@ -22,11 +22,11 @@ class RedirecionarCadastro extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Cadastro(),
+                builder: (context) => const LoginScreen(),
               ),
             );
           },
-          child: const Text('Criar conta.'),
+          child: const Text('Fazer Login'),
         )
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/login_page.dart';
+import 'screens/login.dart';
 
-void main() => runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: LoginScreen()));
+void main() => runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: LoginScreen()));
