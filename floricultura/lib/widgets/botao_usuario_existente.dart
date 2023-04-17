@@ -7,18 +7,28 @@ class RedirecionarLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-      const Text('Já é usuário?',
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        const Text(
+          'Já é usuário?',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Color(0xbb6c4848),
-          )),
-      TextButton(
+          ),
+        ),
+        TextButton(
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LoginScreen()));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LoginScreen(),
+              ),
+            );
           },
-          child: const Text('Fazer Login'))
-    ]);
+          child: const Text('Fazer Login'),
+        )
+      ],
+    );
   }
 }

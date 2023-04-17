@@ -7,18 +7,28 @@ class RedirecionarCadastro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-      const Text('Não possui uma conta?',
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        const Text(
+          'Não possui uma conta?',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Color(0xbb6c4848),
-          )),
-      TextButton(
+          ),
+        ),
+        TextButton(
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Cadastro()));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Cadastro(),
+              ),
+            );
           },
-          child: const Text('Criar conta.'))
-    ]);
+          child: const Text('Criar conta.'),
+        )
+      ],
+    );
   }
 }
