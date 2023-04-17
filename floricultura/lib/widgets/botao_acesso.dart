@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget{
-  const Login({super.key});
-  
+class AcessoBotao extends StatelessWidget {
+  final String text;
+  const AcessoBotao({Key? key, required this.text}) : super(key: key);
+
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: 5),
+        padding: const EdgeInsets.only(bottom: 5),
         alignment: Alignment.center,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -18,8 +19,8 @@ class Login extends StatelessWidget{
             backgroundColor: const Color(0xffffb3b3),
             foregroundColor: const Color(0xff6c4848),
           ),
-          child: const Text('Login'),
+          child: Text(text),
           onPressed: () {},
-      ));
+        ));
   }
 }

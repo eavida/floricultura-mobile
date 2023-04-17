@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CampoSenha extends StatelessWidget {
-  const CampoSenha({super.key});
+class CampoSobrenome extends StatelessWidget {
+  const CampoSobrenome({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.fromLTRB(4, 0, 0, 8),
         child: Container(
           padding: const EdgeInsets.only(left: 20),
           decoration: BoxDecoration(
@@ -14,13 +14,10 @@ class CampoSenha extends StatelessWidget {
               border: Border.all(color: const Color(0xffC7C7C7)),
               borderRadius: BorderRadius.circular(12)),
           child: const TextField(
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              hintText: 'Senha',
-            ),
-            keyboardType: TextInputType.text,
-            obscureText: true,
-          ),
+              decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: 'Sobrenome',
+          )),
         ));
   }
 }

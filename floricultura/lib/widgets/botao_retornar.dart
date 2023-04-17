@@ -9,7 +9,9 @@ class Retornar extends StatelessWidget {
         alignment: Alignment.topLeft,
         padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               backgroundColor: const Color(0xffffb3b3),
