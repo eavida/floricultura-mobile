@@ -6,10 +6,9 @@ class CampoEmail extends StatefulWidget {
 
   @override
   _CampoEmailState createState() => _CampoEmailState();
-
 }
 
-class _CampoEmailState extends State<CampoEmail>{
+class _CampoEmailState extends State<CampoEmail> {
   String _texto = 'Email';
 
   @override
@@ -28,11 +27,6 @@ class _CampoEmailState extends State<CampoEmail>{
                 border: InputBorder.none,
                 hintText: 'Email',
               ),
-              // onChanged: (novoTexto){
-              //   setState((){
-              //     _texto = novoTexto;
-              //   });
-              // },
               keyboardType: TextInputType.emailAddress),
         ));
   }

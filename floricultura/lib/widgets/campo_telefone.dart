@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CampoSenha extends StatefulWidget {
+class CampoTelefone extends StatefulWidget {
   final bool isEditable;
-  const CampoSenha({Key? key, required this.isEditable}) : super(key: key);
+  const CampoTelefone({Key? key, required this.isEditable}) : super(key: key);
 
   @override
-  _CampoSenhaState createState() => _CampoSenhaState();
+  _CampoTelefoneState createState() => _CampoTelefoneState();
 }
 
-class _CampoSenhaState extends State<CampoSenha> {
+class _CampoTelefoneState extends State<CampoTelefone> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,10 +23,9 @@ class _CampoSenhaState extends State<CampoSenha> {
             enabled: widget.isEditable,
             decoration: const InputDecoration(
               border: InputBorder.none,
-              hintText: 'Senha',
+              hintText: 'Telefone',
             ),
-            keyboardType: TextInputType.text,
-            obscureText: true,
+            keyboardType: TextInputType.phone,
           ),
         ));
   }

@@ -6,10 +6,9 @@ class CampoSobrenome extends StatefulWidget {
 
   @override
   _CampoSobrenomeState createState() => _CampoSobrenomeState();
-
 }
 
-class _CampoSobrenomeState extends State<CampoSobrenome>{
+class _CampoSobrenomeState extends State<CampoSobrenome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,11 +20,11 @@ class _CampoSobrenomeState extends State<CampoSobrenome>{
               border: Border.all(color: const Color(0xffC7C7C7)),
               borderRadius: BorderRadius.circular(12)),
           child: TextField(
-            enabled: widget.isEditable,
-            decoration: const InputDecoration(
-            border: InputBorder.none,
-            hintText: 'Sobrenome',
-          )),
+              enabled: widget.isEditable,
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Sobrenome',
+              )),
         ));
   }
 }

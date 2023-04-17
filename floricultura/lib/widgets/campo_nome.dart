@@ -6,11 +6,9 @@ class CampoNome extends StatefulWidget {
 
   @override
   _CampoNomeState createState() => _CampoNomeState();
-
 }
 
-class _CampoNomeState extends State<CampoNome>{
-
+class _CampoNomeState extends State<CampoNome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,9 +22,9 @@ class _CampoNomeState extends State<CampoNome>{
           child: TextField(
               enabled: widget.isEditable,
               decoration: const InputDecoration(
-            border: InputBorder.none,
-            hintText: 'Nome',
-          )),
+                border: InputBorder.none,
+                hintText: 'Nome',
+              )),
         ));
   }
 }
