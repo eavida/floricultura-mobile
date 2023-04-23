@@ -1,11 +1,8 @@
 import 'package:floricultura/widgets/botao_usuario_existente.dart';
-import 'package:floricultura/widgets/campo_sobrenome.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/botao_retornar.dart';
-import '../widgets/campo_email.dart';
-import '../widgets/campo_nome.dart';
-import '../widgets/campo_senha.dart';
+import '../widgets/campo_texto.dart';
 import '../widgets/navigation_bar.dart';
 import '../widgets/botao_acesso.dart';
 
@@ -37,12 +34,12 @@ class Cadastro extends StatelessWidget {
                     children: [
                       Row(
                         children: const <Widget>[
-                          Flexible(child: CampoNome(isEditable: true)),
-                          Flexible(child: CampoSobrenome(isEditable: true))
+                          Flexible(child: CampoTexto(nome: 'Nome', isEditable: true)),
+                          Flexible(child: CampoTexto(nome: 'Sobrenome', isEditable: true))
                         ],
                       ),
-                      const CampoEmail(isEditable: true),
-                      const CampoSenha(isEditable: true),
+                      const CampoTexto(nome: 'Email', isEditable: true),
+                      const CampoTexto(nome: 'Senha', isEditable: true, obscure: true),
                       const AcessoBotao(text: 'Registrar'),
                       const RedirecionarLogin()
                     ],

@@ -1,12 +1,8 @@
 import 'package:floricultura/widgets/botao_editar_info.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
-import 'package:floricultura/widgets/campo_telefone.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/campo_email.dart';
-import '../widgets/campo_nome.dart';
-import '../widgets/campo_senha.dart';
-import '../widgets/campo_sobrenome.dart';
+import '../widgets/campo_texto.dart';
 import '../widgets/navigation_bar.dart';
 
 class InfoUsuario extends StatefulWidget {
@@ -66,28 +62,34 @@ class _InfoUsuario extends State<InfoUsuario> {
                       Row(
                         children: <Widget>[
                           Flexible(
-                            child: CampoNome(
+                            child: CampoTexto(
+                              nome:'Nome',
                               isEditable: _isEditable,
                               controller: _nomeController,
                             ),
                           ),
                           Flexible(
-                            child: CampoSobrenome(
+                            child: CampoTexto(
+                              nome:'Sobreome',
                               isEditable: _isEditable,
                               controller: _sobrenomeController,
                             ),
                           )
                         ],
                       ),
-                      CampoEmail(
+                      CampoTexto(
+                        nome:'Email',
                         isEditable: _isEditable,
                         controller: _emailController,
                       ),
-                      CampoSenha(
+                      CampoTexto(
+                        nome:'Senha',
                         isEditable: _isEditable,
                         controller: _senhaController,
+                        obscure: true,
                       ),
-                      CampoTelefone(
+                      CampoTexto(
+                        nome:'Telefone',
                         isEditable: _isEditable,
                       ),
                       BotaoEditarInfo(
