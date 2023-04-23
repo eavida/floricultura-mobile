@@ -17,6 +17,7 @@ class _Home extends State<Home>{
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
+          AcessoBotao(text: 'Catálogo', screenName: 'catalogo'),
           AcessoBotao(text: 'Login', screenName: 'login'),
           AcessoBotao(text: 'Cadastro', screenName: 'cadastro'),
           AcessoBotao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),

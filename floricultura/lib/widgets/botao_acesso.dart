@@ -11,6 +11,7 @@ class AcessoBotao extends StatelessWidget {
       'login': '/login',
       'cadastro': '/cadastro',
       'info-usuario': '/info-usuario',
+      'catalogo' : '/catalogo',
     };
 
     return Container(

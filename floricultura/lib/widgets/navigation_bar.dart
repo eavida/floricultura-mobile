@@ -23,9 +23,7 @@ class _NavBarState extends State<NavBar>{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: screens[currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
+    return BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         backgroundColor: const Color(0xffffb3b3),
@@ -50,7 +48,6 @@ class _NavBarState extends State<NavBar>{
             label: 'Minha Conta',
           )
         ],
-      ),
     );
   }
 }
