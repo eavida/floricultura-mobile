@@ -1,3 +1,4 @@
+import 'package:floricultura/screens/login.dart';
 import 'package:floricultura/widgets/botao_usuario_existente.dart';
 import 'package:flutter/material.dart';
 
@@ -40,17 +41,17 @@ class Cadastro extends StatelessWidget {
                       ),
                       const CampoTexto(nome: 'Email', isEditable: true),
                       const CampoTexto(nome: 'Senha', isEditable: true, obscure: true),
-                      const AcessoBotao(text: 'Registrar'),
+                      const AcessoBotao(text: 'Registrar', screenName: 'info-usuario',),
                       const RedirecionarLogin()
                     ],
                   ),
                 ),
               ),
             ),
-            const NavBar()
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar()
     );
   }
 }
