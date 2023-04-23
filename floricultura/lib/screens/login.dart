@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/botao_novo_usuario.dart';
+import '../widgets/campo_texto.dart';
 import '../widgets/navigation_bar.dart';
 import '../widgets/botao_retornar.dart';
-import '../widgets/campo_email.dart';
-import '../widgets/campo_senha.dart';
 import '../widgets/botao_acesso.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -32,8 +31,8 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      CampoEmail(isEditable: true),
-                      CampoSenha(isEditable: true),
+                      CampoTexto(nome: 'Email', isEditable: true,),
+                      CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
                       AcessoBotao(text: 'Login'),
                       RedirecionarCadastro(),
                     ],
