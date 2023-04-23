@@ -33,17 +33,17 @@ class LoginScreen extends StatelessWidget {
                     children: const [
                       CampoTexto(nome: 'Email', isEditable: true,),
                       CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
-                      AcessoBotao(text: 'Login'),
+                      AcessoBotao(text: 'Login', screenName: 'info-usuario',),
                       RedirecionarCadastro(),
                     ],
                   ),
                 ),
               ),
             ),
-            const NavBar()
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar()
     );
   }
 }

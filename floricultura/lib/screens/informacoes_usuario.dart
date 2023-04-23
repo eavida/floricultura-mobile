@@ -1,3 +1,4 @@
+import 'package:floricultura/widgets/botao_acesso.dart';
 import 'package:floricultura/widgets/botao_editar_info.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
 import 'package:flutter/material.dart';
@@ -14,10 +15,10 @@ class InfoUsuario extends StatefulWidget {
 
 class _InfoUsuario extends State<InfoUsuario> {
   bool _isEditable = false;
-  TextEditingController _nomeController = TextEditingController();
-  TextEditingController _sobrenomeController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _senhaController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _sobrenomeController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
 
   @override
   void initState() {
@@ -25,7 +26,7 @@ class _InfoUsuario extends State<InfoUsuario> {
     _nomeController.text = "André";
     _sobrenomeController.text = "Bucar";
     _emailController.text = "email@iesb.edu.br";
-    _senhaController.text = "*********";
+    _senhaController.text = "senhasenha";
   }
 
   void toggleEdit() {
@@ -63,14 +64,14 @@ class _InfoUsuario extends State<InfoUsuario> {
                         children: <Widget>[
                           Flexible(
                             child: CampoTexto(
-                              nome:'Nome',
+                              nome: 'Nome',
                               isEditable: _isEditable,
                               controller: _nomeController,
                             ),
                           ),
                           Flexible(
                             child: CampoTexto(
-                              nome:'Sobreome',
+                              nome: 'Sobreome',
                               isEditable: _isEditable,
                               controller: _sobrenomeController,
                             ),
@@ -78,33 +79,40 @@ class _InfoUsuario extends State<InfoUsuario> {
                         ],
                       ),
                       CampoTexto(
-                        nome:'Email',
+                        nome: 'Email',
                         isEditable: _isEditable,
                         controller: _emailController,
                       ),
                       CampoTexto(
-                        nome:'Senha',
+                        nome: 'Senha',
                         isEditable: _isEditable,
                         controller: _senhaController,
                         obscure: true,
                       ),
                       CampoTexto(
-                        nome:'Telefone',
+                        nome: 'Telefone',
                         isEditable: _isEditable,
                       ),
                       BotaoEditarInfo(
                         onPressed: toggleEdit,
                         isEditable: _isEditable,
                       ),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                        child: AcessoBotao(
+                          text: 'Meus Pedidos',
+                          screenName: 'info-usuario',
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
-            const NavBar()
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar()
     );
   }
 }

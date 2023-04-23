@@ -1,12 +1,18 @@
-import 'package:floricultura/screens/informacoes_usuario.dart';
 import 'package:flutter/material.dart';
 
 class AcessoBotao extends StatelessWidget {
   final String text;
-  const AcessoBotao({Key? key, required this.text}) : super(key: key);
+  final String screenName;
+  const AcessoBotao({Key? key, required this.text, required this.screenName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, String> routes = {
+      'login': '/login',
+      'cadastro': '/cadastro',
+      'info-usuario': '/info-usuario',
+    };
+
     return Container(
       padding: const EdgeInsets.only(bottom: 5),
       alignment: Alignment.center,
@@ -22,12 +28,10 @@ class AcessoBotao extends StatelessWidget {
         ),
         child: Text(text),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const InfoUsuario(),
-            ),
-          );
+          final routeName = routes[screenName];
+          if (routeName != null) {
+            Navigator.pushNamed(context, routeName);
+          }
         },
       ),
     );
