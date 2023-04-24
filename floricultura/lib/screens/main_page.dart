@@ -12,7 +12,7 @@ class MainPage extends StatefulWidget{
 
 class _MainPageState extends State<MainPage>{
   int currentIndex = 0;
-  final screens = [
+  final screens = const [
     Home(),
     Cadastro(),
     InfoUsuario(),
@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage>{
   Widget build(BuildContext context){
     return Scaffold(
       body: screens[currentIndex],
-      bottomNavigationBar: NavBar(),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

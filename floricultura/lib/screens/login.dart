@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/botao_novo_usuario.dart';
 import '../widgets/campo_texto.dart';
-import '../widgets/navigation_bar.dart';
 import '../widgets/botao_retornar.dart';
 import '../widgets/botao_acesso.dart';
 
@@ -43,7 +42,6 @@ class LoginScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NavBar()
     );
   }
 }
