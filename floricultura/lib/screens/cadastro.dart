@@ -1,10 +1,8 @@
-import 'package:floricultura/screens/login.dart';
 import 'package:floricultura/widgets/botao_usuario_existente.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/botao_retornar.dart';
 import '../widgets/campo_texto.dart';
-import '../widgets/navigation_bar.dart';
 import '../widgets/botao_acesso.dart';
 
 class Cadastro extends StatelessWidget {
@@ -24,7 +22,6 @@ class Cadastro extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Retornar(),
             Expanded(
               child: Padding(
                 padding:
@@ -39,9 +36,9 @@ class Cadastro extends StatelessWidget {
                           Flexible(child: CampoTexto(nome: 'Sobrenome', isEditable: true))
                         ],
                       ),
-                      const CampoTexto(nome: 'Email', isEditable: true),
-                      const CampoTexto(nome: 'Senha', isEditable: true, obscure: true),
-                      const AcessoBotao(text: 'Registrar', screenName: 'info-usuario',),
+                      const CampoTexto(nome: 'Email', isEditable: true, textInputType: TextInputType.emailAddress,),
+                      const CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
+                      const AcessoBotao(text: 'Registrar', screenName: 'main',),
                       const RedirecionarLogin()
                     ],
                   ),
@@ -51,7 +48,6 @@ class Cadastro extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NavBar()
     );
   }
 }

@@ -1,8 +1,6 @@
 import 'package:floricultura/widgets/botao_acesso.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/navigation_bar.dart';
-
 class Home extends StatefulWidget{
   const Home({super.key});
 
@@ -18,12 +16,9 @@ class _Home extends State<Home>{
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
           AcessoBotao(text: 'Catálogo', screenName: 'catalogo'),
-          AcessoBotao(text: 'Login', screenName: 'login'),
-          AcessoBotao(text: 'Cadastro', screenName: 'cadastro'),
           AcessoBotao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),
         ],
       ),
-      bottomNavigationBar: const NavBar(),
     );
   }
 }
