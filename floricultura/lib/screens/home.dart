@@ -1,4 +1,4 @@
-import 'package:floricultura/widgets/botao_acesso.dart';
+import 'package:floricultura/widgets/botao_geral.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -15,11 +15,11 @@ class _Home extends State<Home>{
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          AcessoBotao(text: 'Catálogo', screenName: 'catalogo'),
-          AcessoBotao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),
-          AcessoBotao(text: 'Carrinho', screenName: 'carrinho'),
-          AcessoBotao(text: 'Detalhes do Produto', screenName: 'detalhesp',),
-          AcessoBotao(text: 'Página do produto', screenName: 'produto-page',),
+          Botao(text: 'Catálogo', screenName: 'catalogo'),
+          Botao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),
+          Botao(text: 'Carrinho', screenName: 'carrinho'),
+          Botao(text: 'Detalhes do Produto', screenName: 'detalhesp',),
+          Botao(text: 'Página do produto', screenName: 'produto-page',),
         ],
       ),
     );

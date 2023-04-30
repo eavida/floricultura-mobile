@@ -1,9 +1,8 @@
 import 'package:floricultura/widgets/botao_usuario_existente.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/botao_retornar.dart';
 import '../widgets/campo_texto.dart';
-import '../widgets/botao_acesso.dart';
+import '../widgets/botao_geral.dart';
 
 class Cadastro extends StatelessWidget {
   const Cadastro({super.key});
@@ -38,7 +37,7 @@ class Cadastro extends StatelessWidget {
                       ),
                       const CampoTexto(nome: 'Email', isEditable: true, textInputType: TextInputType.emailAddress,),
                       const CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
-                      const AcessoBotao(text: 'Registrar', screenName: 'main',),
+                      const Botao(text: 'Registrar', screenName: 'main',),
                       const RedirecionarLogin()
                     ],
                   ),

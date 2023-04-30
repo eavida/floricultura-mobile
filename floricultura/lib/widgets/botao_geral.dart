@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class AcessoBotao extends StatelessWidget {
+class Botao extends StatelessWidget {
   final String text;
-  final String screenName;
-  const AcessoBotao({Key? key, required this.text, required this.screenName}) : super(key: key);
+  final String? screenName;
+  const Botao({Key? key, required this.text, this.screenName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

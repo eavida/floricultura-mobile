@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ProductCWidget extends StatelessWidget {
+class CarrinhoItem extends StatelessWidget {
+  final String nome;
+  final String imagem;
+  final double preco;
 
-
-
+  const CarrinhoItem({Key? key, required this.nome, required this.imagem, required this.preco}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    String precoArredondado = preco.toStringAsFixed(2);
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xFFFFB3B3),
+        color: const Color(0xFFFFB3B3),
         borderRadius: BorderRadius.circular(12),
       ),
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -24,30 +27,30 @@ class ProductCWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: ClipRRect(borderRadius: BorderRadius.circular(8.0),
-            child: Image.network(
-              'assets/images/orquidia.jpg',
+            child: Image.asset(
+              imagem,
               fit: BoxFit.cover,
             ),
             )
 
           ),
-          const Text(
-            'Produto 2 no carrinho',
-            style: TextStyle(
+          Text(
+            nome,
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w300,
-              color: Color.fromARGB(255, 0, 0, 0),
+              color: Color(0xff6c4848),
             ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-               const Text(
-                'R\$ 180,00',
-                style: TextStyle(
+               Text(
+                'R\$$precoArredondado',
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w300,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Color(0xff6c4848),
                 ),
               ),
               const SizedBox(height: 8),
@@ -57,7 +60,7 @@ class ProductCWidget extends StatelessWidget {
                 },
                 child: const Icon(
                   Icons.close,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: Color(0xff6c4848),
                   size: 24,
                 ),
               ),
