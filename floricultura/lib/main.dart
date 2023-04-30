@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => MainPage(),
+        '/': (context) => const LoginScreen(),
         '/login': (context) => const LoginScreen(),
         '/cadastro': (context) => const Cadastro(),
         '/info-usuario': (context) => const InfoUsuario(),
         '/catalogo': (context) => const CatalogoPage(),
+        '/home' : (context) => const Home(),
+        '/main': (context) => MainPage(),
       }, 
     );
   }

@@ -1,3 +1,4 @@
+import 'package:floricultura/widgets/semicirculo_com_icone.dart';
 import 'package:flutter/material.dart';
 import '../widgets/botao_novo_usuario.dart';
 import '../widgets/campo_texto.dart';
@@ -21,7 +22,6 @@ class LoginScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Retornar(),
             Expanded(
               child: Padding(
                 padding:
@@ -30,9 +30,20 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      CampoTexto(nome: 'Email', isEditable: true,),
-                      CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
-                      AcessoBotao(text: 'Login', screenName: 'info-usuario',),
+                      CampoTexto(
+                        nome: 'Email',
+                        isEditable: true,
+                        textInputType: TextInputType.emailAddress,
+                      ),
+                      CampoTexto(
+                        nome: 'Senha',
+                        isEditable: true,
+                        obscure: true,
+                      ),
+                      AcessoBotao(
+                        text: 'Login',
+                        screenName: 'main',
+                      ),
                       RedirecionarCadastro(),
                     ],
                   ),

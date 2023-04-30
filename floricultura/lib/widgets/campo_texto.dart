@@ -5,13 +5,16 @@ class CampoTexto extends StatefulWidget {
   final TextEditingController? controller;
   final String? nome;
   final bool obscure;
+  final TextInputType textInputType;
 
   const CampoTexto(
       {Key? key,
       required this.isEditable,
       this.controller,
       required this.nome,
-      this.obscure = false})
+      this.obscure = false,
+      this.textInputType = TextInputType.text,
+      })
       : super(key: key);
 
   @override
@@ -39,6 +42,7 @@ class _CampoTextoState extends State<CampoTexto> {
             border: InputBorder.none,
             hintText: widget.nome,
           ),
+          keyboardType: widget.textInputType,
           obscureText: widget.obscure,
         ),
       ),

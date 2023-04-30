@@ -22,7 +22,6 @@ class Cadastro extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Retornar(),
             Expanded(
               child: Padding(
                 padding:
@@ -37,9 +36,9 @@ class Cadastro extends StatelessWidget {
                           Flexible(child: CampoTexto(nome: 'Sobrenome', isEditable: true))
                         ],
                       ),
-                      const CampoTexto(nome: 'Email', isEditable: true),
-                      const CampoTexto(nome: 'Senha', isEditable: true, obscure: true),
-                      const AcessoBotao(text: 'Registrar', screenName: 'info-usuario',),
+                      const CampoTexto(nome: 'Email', isEditable: true, textInputType: TextInputType.emailAddress,),
+                      const CampoTexto(nome: 'Senha', isEditable: true, obscure: true,),
+                      const AcessoBotao(text: 'Registrar', screenName: 'main',),
                       const RedirecionarLogin()
                     ],
                   ),

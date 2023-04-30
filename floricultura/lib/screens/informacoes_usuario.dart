@@ -49,6 +49,7 @@ class _InfoUsuario extends State<InfoUsuario> {
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const Retornar(),
             Expanded(
