@@ -14,6 +14,9 @@ class AcessoBotao extends StatelessWidget {
       'catalogo' : '/catalogo',
       'home' : '/home',
       'main' : '/main',
+      'carrinho' : '/carrinho',
+      'detalhes-produto' : '/detalhes-produto',
+      'produto-page' : '/produto-page',
     };
 
     return Container(

@@ -1,4 +1,3 @@
-import 'package:floricultura/widgets/semicirculo_com_icone.dart';
 import 'package:flutter/material.dart';
 import '../widgets/botao_novo_usuario.dart';
 import '../widgets/campo_texto.dart';

@@ -17,6 +17,9 @@ class _Home extends State<Home>{
         children: const [
           AcessoBotao(text: 'Catálogo', screenName: 'catalogo'),
           AcessoBotao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),
+          AcessoBotao(text: 'Carrinho', screenName: 'carrinho'),
+          AcessoBotao(text: 'Detalhes do Produto', screenName: 'detalhesp',),
+          AcessoBotao(text: 'Página do produto', screenName: 'produto-page',),
         ],
       ),
     );
