@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/widget_texto.dart';
 
-class DetalhesProduto extends StatelessWidget {
-  const DetalhesProduto({Key? key}) : super(key: key);
+class DetalhesPedido extends StatelessWidget {
+  const DetalhesPedido({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

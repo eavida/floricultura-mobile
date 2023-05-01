@@ -2,10 +2,11 @@ import 'dart:js';
 
 import 'package:floricultura/screens/cadastro.dart';
 import 'package:floricultura/screens/carrinho.dart';
-import 'package:floricultura/screens/detalhes_do_produto.dart';
+import 'package:floricultura/screens/detalhes_do_pedido.dart';
 import 'package:floricultura/screens/home.dart';
 import 'package:floricultura/screens/informacoes_usuario.dart';
 import 'package:floricultura/screens/main_page.dart';
+import 'package:floricultura/screens/pagamento.dart';
 import 'package:floricultura/screens/produto_page.dart';
 import 'package:floricultura/widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget{
         '/home' : (context) => const Home(),
         '/main': (context) => const MainPage(),
         '/carrinho': (context) => const Carrinho(),
-        '/detalhes-produto': (context) => const DetalhesProduto(),
+        '/detalhes-pedido': (context) => const DetalhesPedido(),
         '/produto-page': (context) => const ProdutoPage(),
+        '/pagamento' : (context) => const Pagamento(),
       }, 
     );
   }

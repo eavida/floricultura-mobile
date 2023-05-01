@@ -1,7 +1,7 @@
 import 'package:floricultura/screens/cadastro.dart';
 import 'package:floricultura/screens/carrinho.dart';
 import 'package:floricultura/screens/catalogo.dart';
-import 'package:floricultura/screens/detalhes_do_produto.dart';
+import 'package:floricultura/screens/detalhes_do_pedido.dart';
 import 'package:floricultura/screens/informacoes_usuario.dart';
 import 'package:floricultura/screens/login.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,6 @@ class _NavBarState extends State<NavBar>{
     CatalogoPage(),
     Carrinho(),
     InfoUsuario(),
-    DetalhesProduto(),
   ];
 
   @override
