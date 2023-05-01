@@ -32,16 +32,19 @@ class ProdutoPage extends StatelessWidget {
                     const WidgetTexto(
                       text: 'R\$180,00',
                       tamanho: 30,
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 10),
                     const WidgetTexto(
                       text: 'Orquídia Branca',
                       tamanho: 20,
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 5),
                     const WidgetTexto(
                       text:
                       'Descrição do Produto vem aqui, pelo menos umas duas a quatro linhas de informação sobre o produto que no caso é a orquídia branca de duas hastes botão logo abaixo.',
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 10),
                     Container(
@@ -51,7 +54,7 @@ class ProdutoPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const WidgetTexto(text: 'Você também pode gostar:', tamanho: 25),
+                    const WidgetTexto(text: 'Você também pode gostar:', tamanho: 25, alignment: Alignment.centerLeft,),
                   ],
                 ),
               ),

@@ -22,7 +22,8 @@ class DetalhesPedido extends StatelessWidget {
             children: [
               const ImagemHeader(imagem: 'images/orquidia.jpg'),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16),
                 child: Column(
                   children: [
                     Container(
@@ -33,8 +34,15 @@ class DetalhesPedido extends StatelessWidget {
                       padding: const EdgeInsets.all(16),
                       child: Column(
                         children: const [
-                          WidgetTexto(text: 'Status do Pedido', tamanho: 20),
-                          WidgetTexto(text: 'Entregue'),
+                          WidgetTexto(
+                            text: 'Status do Pedido',
+                            tamanho: 20,
+                            alignment: Alignment.centerLeft,
+                          ),
+                          WidgetTexto(
+                            text: 'Entregue',
+                            alignment: Alignment.centerLeft,
+                          ),
                         ],
                       ),
                     ),
@@ -47,11 +55,19 @@ class DetalhesPedido extends StatelessWidget {
                       padding: const EdgeInsets.all(16),
                       child: Column(
                         children: const [
-                          WidgetTexto(text: 'Detalhes do Pedido:', tamanho: 20),
+                          WidgetTexto(
+                            text: 'Detalhes do Pedido:',
+                            tamanho: 20,
+                            alignment: Alignment.centerLeft,
+                          ),
                           PrecoItem(texto: 'Planta 1', valor: 180.00),
                           PrecoItem(texto: 'Planta 2', valor: 120.00),
                           PrecoItem(texto: 'Desconto:', valor: 00.00),
-                          PrecoItem(texto: 'Total:', valor: 300.00, fontSize: 25,),
+                          PrecoItem(
+                            texto: 'Total:',
+                            valor: 300.00,
+                            fontSize: 25,
+                          ),
                         ],
                       ),
                     ),
@@ -64,8 +80,15 @@ class DetalhesPedido extends StatelessWidget {
                       padding: const EdgeInsets.all(16),
                       child: Column(
                         children: const [
-                          WidgetTexto(text: 'Endereço de Entrega', tamanho: 20),
-                          WidgetTexto(text: 'IESB Sul'),
+                          WidgetTexto(
+                            text: 'Endereço de Entrega',
+                            tamanho: 20,
+                            alignment: Alignment.centerLeft,
+                          ),
+                          WidgetTexto(
+                            text: 'IESB Sul',
+                            alignment: Alignment.centerLeft,
+                          ),
                         ],
                       ),
                     ),

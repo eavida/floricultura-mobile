@@ -51,7 +51,6 @@ class _InfoUsuario extends State<InfoUsuario> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Retornar(),
             Expanded(
               child: Padding(
                 padding:
@@ -101,7 +100,7 @@ class _InfoUsuario extends State<InfoUsuario> {
                         padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
                         child: Botao(
                           text: 'Meus Pedidos',
-                          screenName: 'info-usuario',
+                          screenName: 'meus-pedidos',
                         ),
                       ),
                     ],
