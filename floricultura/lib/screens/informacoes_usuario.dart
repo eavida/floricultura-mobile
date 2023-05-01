@@ -4,6 +4,7 @@ import 'package:floricultura/widgets/botao_retornar.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/campo_texto.dart';
+import '../widgets/navigation_bar.dart';
 
 class InfoUsuario extends StatefulWidget {
   const InfoUsuario({Key? key}) : super(key: key);
@@ -111,6 +112,7 @@ class _InfoUsuario extends State<InfoUsuario> {
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

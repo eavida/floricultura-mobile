@@ -7,6 +7,7 @@ import 'package:floricultura/widgets/widget_texto.dart';
 import 'package:flutter/material.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
 import '../widgets/carrinho_item.dart';
+import '../widgets/navigation_bar.dart';
 
 class Carrinho extends StatelessWidget {
   const Carrinho({super.key});
@@ -95,9 +96,10 @@ class Carrinho extends StatelessWidget {
                 screenName: 'pagamento',
               ),
             ),
-          ]),
+          ],),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

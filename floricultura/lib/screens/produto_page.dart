@@ -22,8 +22,8 @@ class ProdutoPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: [
+          child: ListView(
+            children: <Widget>[
               const ImagemHeader(imagem: "images/orquidia.jpg"),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -58,8 +58,8 @@ class ProdutoPage extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
-                child: GridView.count(
+                GridView.count(
+                  shrinkWrap: true,
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   childAspectRatio: 0.7,
@@ -75,13 +75,23 @@ class ProdutoPage extends StatelessWidget {
                       price: "R\$ 65,00",
                       image: "images/orquidia.jpg",
                     ),
+                    ProductWidget(
+                      name: "Orquídea de duas hastes rosa...",
+                      price: "R\$ 50,00",
+                      image: "images/orquidia.jpg",
+                    ),
+                    ProductWidget(
+                      name: "Orquídea de duas hastes azul...",
+                      price: "R\$ 65,00",
+                      image: "images/orquidia.jpg",
+                    ),
                   ],
                 ),
-              ),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

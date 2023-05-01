@@ -33,6 +33,7 @@ class Pagamento extends StatelessWidget {
               const CampoTexto(
                 nome: 'Endereco',
                 isEditable: true,
+                textInputType: TextInputType.streetAddress,
               ),
               const SizedBox(height: 20),
               const LinhaDivisora(),
@@ -40,18 +41,28 @@ class Pagamento extends StatelessWidget {
               const CampoTexto(
                 nome: 'Numero do Cartao',
                 isEditable: true,
+                textInputType: TextInputType.number,
               ),
               const CampoTexto(
                 nome: 'Nome do Titular',
                 isEditable: true,
+                textInputType: TextInputType.name,
               ),
               Row(
                 children: const [
                   Expanded(
-                    child: CampoTexto(isEditable: true, nome: 'CVV'),
+                    child: CampoTexto(
+                      isEditable: true,
+                      nome: 'CVV',
+                      textInputType: TextInputType.visiblePassword,
+                    ),
                   ),
                   Expanded(
-                    child: CampoTexto(isEditable: true, nome: 'Vencimento'),
+                    child: CampoTexto(
+                      isEditable: true,
+                      nome: 'Vencimento',
+                      textInputType: TextInputType.datetime,
+                    ),
                   ),
                 ],
               ),
@@ -95,12 +106,14 @@ class Pagamento extends StatelessWidget {
                 ),
                 child: const Botao(
                   text: 'Finalizar Compra',
+                  screenName: 'home',
                 ),
               ),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

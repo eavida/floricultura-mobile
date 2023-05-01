@@ -6,7 +6,6 @@ import 'package:floricultura/screens/detalhes_do_pedido.dart';
 import 'package:floricultura/screens/historico_de_pedidos.dart';
 import 'package:floricultura/screens/home.dart';
 import 'package:floricultura/screens/informacoes_usuario.dart';
-import 'package:floricultura/screens/main_page.dart';
 import 'package:floricultura/screens/pagamento.dart';
 import 'package:floricultura/screens/produto_page.dart';
 import 'package:floricultura/widgets/navigation_bar.dart';
@@ -31,7 +30,6 @@ class MyApp extends StatelessWidget{
         '/info-usuario': (context) => const InfoUsuario(),
         '/catalogo': (context) => const CatalogoPage(),
         '/home' : (context) => const Home(),
-        '/main': (context) => const MainPage(),
         '/carrinho': (context) => const Carrinho(),
         '/detalhes-pedido': (context) => const DetalhesPedido(),
         '/produto-page': (context) => const ProdutoPage(),

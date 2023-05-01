@@ -3,6 +3,7 @@ import 'package:floricultura/widgets/divisor.dart';
 import 'package:floricultura/widgets/pedido_anterior.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/navigation_bar.dart';
 import '../widgets/widget_texto.dart';
 
 class HistoricoPedidos extends StatelessWidget {
@@ -49,6 +50,7 @@ class HistoricoPedidos extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:floricultura/widgets/botao_geral.dart';
+import 'package:floricultura/widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -18,6 +19,7 @@ class _Home extends State<Home>{
           Botao(text: 'Catálogo', screenName: 'catalogo'),
         ],
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }
