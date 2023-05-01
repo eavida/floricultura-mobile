@@ -15,8 +15,9 @@ class Botao extends StatelessWidget {
       'home' : '/home',
       'main' : '/main',
       'carrinho' : '/carrinho',
-      'detalhes-produto' : '/detalhes-produto',
+      'detalhes-pedido' : '/detalhes-pedido',
       'produto-page' : '/produto-page',
+      'pagamento' : '/pagamento',
     };
 
     return Container(
