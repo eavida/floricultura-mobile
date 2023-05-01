@@ -1,4 +1,4 @@
-import 'package:floricultura/widgets/botao_acesso.dart';
+import 'package:floricultura/widgets/botao_geral.dart';
 import 'package:floricultura/widgets/botao_editar_info.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +99,7 @@ class _InfoUsuario extends State<InfoUsuario> {
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
-                        child: AcessoBotao(
+                        child: Botao(
                           text: 'Meus Pedidos',
                           screenName: 'info-usuario',
                         ),

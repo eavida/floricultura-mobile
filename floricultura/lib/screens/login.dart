@@ -1,9 +1,8 @@
-import 'package:floricultura/widgets/semicirculo_com_icone.dart';
 import 'package:flutter/material.dart';
 import '../widgets/botao_novo_usuario.dart';
 import '../widgets/campo_texto.dart';
 import '../widgets/botao_retornar.dart';
-import '../widgets/botao_acesso.dart';
+import '../widgets/botao_geral.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                         isEditable: true,
                         obscure: true,
                       ),
-                      AcessoBotao(
+                      Botao(
                         text: 'Login',
                         screenName: 'main',
                       ),
