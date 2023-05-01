@@ -3,6 +3,7 @@ import 'package:floricultura/widgets/divisor.dart';
 import 'package:floricultura/widgets/pedido_anterior.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/icone.dart';
 import '../widgets/navigation_bar.dart';
 import '../widgets/widget_texto.dart';
 
@@ -22,13 +23,15 @@ class HistoricoPedidos extends StatelessWidget {
           ),
           child: Column(
             children: const [
-              Retornar(),
+              Icone(iconData: Icons.receipt_long),
               WidgetTexto(
                 text: 'Meus Pedidos',
                 tamanho: 30,
                 alignment: Alignment.center,
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               LinhaDivisora(),
               PedidoAnterior(
                 nomePedido: 'Pedido #1234',

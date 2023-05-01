@@ -13,7 +13,8 @@ class _NavBarState extends State<NavBar> {
     {'route': '/home'},
     {'route': '/catalogo'},
     {'route': '/carrinho'},
-    {'route': '/info-usuario'}
+    {'route': '/meus-pedidos'},
+    {'route': '/info-usuario'},
   ];
 
   void _onTapped(int index) {
@@ -44,6 +45,10 @@ class _NavBarState extends State<NavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_cart, color: Color(0xff6c4848), size: 30),
+          label: 'Carrinho',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.receipt_long, color: Color(0xff6c4848), size: 30),
           label: 'Carrinho',
         ),
         BottomNavigationBarItem(

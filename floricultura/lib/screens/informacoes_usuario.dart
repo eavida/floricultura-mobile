@@ -1,9 +1,12 @@
 import 'package:floricultura/widgets/botao_geral.dart';
 import 'package:floricultura/widgets/botao_editar_info.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
+import 'package:floricultura/widgets/divisor.dart';
+import 'package:floricultura/widgets/widget_texto.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/campo_texto.dart';
+import '../widgets/icone.dart';
 import '../widgets/navigation_bar.dart';
 
 class InfoUsuario extends StatefulWidget {
@@ -44,18 +47,25 @@ class _InfoUsuario extends State<InfoUsuario> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/background.jpg'),
-            //image: NetworkImage(
-            //"https://images.unsplash.com/photo-1544833058-e70f9ca25c17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const Icone(iconData: Icons.account_circle),
+            const WidgetTexto(
+              text: 'Minha Conta',
+              alignment: Alignment.center,
+              tamanho: 30,
+            ),
+            const LinhaDivisora(),
             Expanded(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 10,
+                ),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -99,9 +109,12 @@ class _InfoUsuario extends State<InfoUsuario> {
                       ),
                       const Padding(
                         padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
-                        child: Botao(
-                          text: 'Meus Pedidos',
-                          screenName: 'meus-pedidos',
+                        child: FractionallySizedBox(
+                          widthFactor: 0.3,
+                          child: Botao(
+                            text: 'Sair',
+                            screenName: 'login',
+                          ),
                         ),
                       ),
                     ],
