@@ -1,5 +1,6 @@
 import 'package:floricultura/widgets/botao_geral.dart';
 import 'package:floricultura/widgets/campo_texto.dart';
+import 'package:floricultura/widgets/icone.dart';
 import 'package:floricultura/widgets/preco_item.dart';
 import 'package:flutter/material.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
@@ -20,7 +21,7 @@ class Carrinho extends StatelessWidget {
             ),
           ),
           child: Column(children: [
-            const Retornar(),
+            const Icone(iconData: Icons.shopping_cart),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
@@ -33,17 +34,11 @@ class Carrinho extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            Container(
-              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-              child: const CarrinhoItem(
-                  nome: 'Item 1', imagem: 'images/orquidia.jpg', preco: 180.00),
-            ),
+            const CarrinhoItem(
+                nome: 'Item 1', imagem: 'images/orquidia.jpg', preco: 180.00),
             const SizedBox(height: 10),
-            Container(
-              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-              child: const CarrinhoItem(
-                  nome: 'Item 2', imagem: 'images/orquidia.jpg', preco: 180.00),
-            ),
+            const CarrinhoItem(
+                nome: 'Item 2', imagem: 'images/orquidia.jpg', preco: 180.00),
             const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
@@ -72,12 +67,12 @@ class Carrinho extends StatelessWidget {
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: PrecoItem(texto: 'Subtotal:', valor: 360.00, fontSize: 16,),
+              child: PrecoItem(texto: 'Subtotal:', valor: 360.00,),
             ),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: PrecoItem(texto: 'Desconto:', valor: 10.00, fontSize: 16,),
+              child: PrecoItem(texto: 'Desconto:', valor: 10.00,),
             ),
             const SizedBox(height: 20),
             Container(
@@ -87,7 +82,7 @@ class Carrinho extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: PrecoItem(texto: 'Total:', valor: 350.00, fontSize: 25,),
             ),
             const SizedBox(height: 20),

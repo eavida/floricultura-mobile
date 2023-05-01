@@ -1,5 +1,7 @@
 import 'package:floricultura/screens/cadastro.dart';
+import 'package:floricultura/screens/carrinho.dart';
 import 'package:floricultura/screens/catalogo.dart';
+import 'package:floricultura/screens/detalhes_do_produto.dart';
 import 'package:floricultura/screens/informacoes_usuario.dart';
 import 'package:floricultura/screens/login.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +20,18 @@ class _NavBarState extends State<NavBar>{
   static const pages = [
     Home(),
     CatalogoPage(),
+    Carrinho(),
     InfoUsuario(),
-    LoginScreen()
+    DetalhesProduto(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[_currentIndex],
+      body: IndexedStack(
+        index: _currentIndex,
+        children: pages
+      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (value) {

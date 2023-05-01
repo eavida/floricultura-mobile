@@ -1,10 +1,8 @@
+import 'package:floricultura/widgets/imagem_header.dart';
+import 'package:floricultura/widgets/preco_item.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/botao_retornar.dart';
-import '../widgets/detalhes_do_produto.dart';
-import '../widgets/enderecoe.dart';
-import '../widgets/navigation_bar.dart';
-import '../widgets/statusp.dart';
+import '../widgets/widget_texto.dart';
 
 class DetalhesProduto extends StatelessWidget {
   const DetalhesProduto({Key? key}) : super(key: key);
@@ -12,31 +10,68 @@ class DetalhesProduto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/background.jpg"),
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/background.jpg"),
+            fit: BoxFit.cover,
           ),
+        ),
+        child: SingleChildScrollView(
           child: Column(
-            children:  [
-              const Retornar(),
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: const StatusP(),
+            children: [
+              const ImagemHeader(imagem: 'images/orquidia.jpg'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16),
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFB3B3),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        children: const [
+                          WidgetTexto(text: 'Status do Pedido', tamanho: 20),
+                          WidgetTexto(text: 'Entregue'),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 25),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFB3B3),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        children: const [
+                          WidgetTexto(text: 'Detalhes do Pedido:', tamanho: 20),
+                          PrecoItem(texto: 'Planta 1', valor: 180.00),
+                          PrecoItem(texto: 'Planta 2', valor: 120.00),
+                          PrecoItem(texto: 'Desconto:', valor: 00.00),
+                          PrecoItem(texto: 'Total:', valor: 300.00, fontSize: 25,),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 25),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFB3B3),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        children: const [
+                          WidgetTexto(text: 'Endereço de Entrega', tamanho: 20),
+                          WidgetTexto(text: 'IESB Sul'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(height: 25),
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: const DetalhesDP(),
-              ),           
-              const SizedBox(height: 25),
-              Container(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                child: const EnderecoE(),
-              ),            
             ],
           ),
         ),

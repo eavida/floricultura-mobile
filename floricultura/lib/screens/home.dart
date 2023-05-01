@@ -18,7 +18,7 @@ class _Home extends State<Home>{
           Botao(text: 'Catálogo', screenName: 'catalogo'),
           Botao(text: 'Informaçoes de Usuario', screenName: 'info-usuario'),
           Botao(text: 'Carrinho', screenName: 'carrinho'),
-          Botao(text: 'Detalhes do Produto', screenName: 'detalhesp',),
+          Botao(text: 'Detalhes do Produto', screenName: 'detalhes-produto',),
           Botao(text: 'Página do produto', screenName: 'produto-page',),
         ],
       ),
