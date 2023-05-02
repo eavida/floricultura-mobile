@@ -10,10 +10,10 @@ class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
-  _Home createState() => _Home();
+  _HomeState createState() => _HomeState();
 }
 
-class _Home extends State<Home> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,6 @@ class _Home extends State<Home> {
                   tamanho: 30,
                   alignment: Alignment.center,
                 ),
-                LinhaDivisora(),
                 PreviewItens(text: 'Orquídeas'),
                 PreviewItens(text: 'Rosas'),
                 PreviewItens(text: 'Margaridas'),

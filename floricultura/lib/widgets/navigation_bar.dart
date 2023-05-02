@@ -11,7 +11,7 @@ class _NavBarState extends State<NavBar> {
   int _currentIndex = 0;
   final List<Map<String, dynamic>> _itens = [
     {'route': '/home'},
-    {'route': '/catalogo'},
+    {'route': '/search'},
     {'route': '/carrinho'},
     {'route': '/meus-pedidos'},
     {'route': '/info-usuario'},

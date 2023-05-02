@@ -54,7 +54,6 @@ class PreviewItens extends StatelessWidget {
             ),
           ),
         ),
-        const LinhaDivisora(),
       ],
     );
   }

@@ -5,13 +5,15 @@ class WidgetTexto extends StatelessWidget {
   final double? tamanho;
   final Alignment alignment;
   final FontWeight? fontWeight;
+  final Color textColor;
 
   const WidgetTexto(
       {Key? key,
       required this.text,
       this.tamanho,
       required this.alignment,
-      this.fontWeight})
+      this.fontWeight,
+      this.textColor = Colors.black})
       : super(key: key);
 
   @override
@@ -24,6 +26,7 @@ class WidgetTexto extends StatelessWidget {
         style: TextStyle(
           fontSize: tamanho,
           fontWeight: fontWeight,
+          color: textColor,
         ),
       ),
     );
