@@ -22,8 +22,8 @@ class ProdutoPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: [
+          child: ListView(
+            children: <Widget>[
               const ImagemHeader(imagem: "images/orquidia.jpg"),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -32,16 +32,19 @@ class ProdutoPage extends StatelessWidget {
                     const WidgetTexto(
                       text: 'R\$180,00',
                       tamanho: 30,
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 10),
                     const WidgetTexto(
                       text: 'Orquídia Branca',
                       tamanho: 20,
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 5),
                     const WidgetTexto(
                       text:
                       'Descrição do Produto vem aqui, pelo menos umas duas a quatro linhas de informação sobre o produto que no caso é a orquídia branca de duas hastes botão logo abaixo.',
+                      alignment: Alignment.centerLeft,
                     ),
                     const SizedBox(height: 10),
                     Container(
@@ -51,12 +54,12 @@ class ProdutoPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const WidgetTexto(text: 'Você também pode gostar:', tamanho: 25),
+                    const WidgetTexto(text: 'Você também pode gostar:', tamanho: 25, alignment: Alignment.centerLeft,),
                   ],
                 ),
               ),
-              Expanded(
-                child: GridView.count(
+                GridView.count(
+                  shrinkWrap: true,
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   childAspectRatio: 0.7,
@@ -72,13 +75,23 @@ class ProdutoPage extends StatelessWidget {
                       price: "R\$ 65,00",
                       image: "images/orquidia.jpg",
                     ),
+                    ProductWidget(
+                      name: "Orquídea de duas hastes rosa...",
+                      price: "R\$ 50,00",
+                      image: "images/orquidia.jpg",
+                    ),
+                    ProductWidget(
+                      name: "Orquídea de duas hastes azul...",
+                      price: "R\$ 65,00",
+                      image: "images/orquidia.jpg",
+                    ),
                   ],
                 ),
-              ),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

@@ -14,8 +14,6 @@ class LoginScreen extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/background.jpg'),
-            //image: NetworkImage(
-            //"https://images.unsplash.com/photo-1544833058-e70f9ca25c17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"),
             fit: BoxFit.cover,
           ),
         ),
@@ -41,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       Botao(
                         text: 'Login',
-                        screenName: 'main',
+                        screenName: 'home',
                       ),
                       RedirecionarCadastro(),
                     ],

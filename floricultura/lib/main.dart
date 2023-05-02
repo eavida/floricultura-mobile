@@ -3,11 +3,12 @@ import 'dart:js';
 import 'package:floricultura/screens/cadastro.dart';
 import 'package:floricultura/screens/carrinho.dart';
 import 'package:floricultura/screens/detalhes_do_pedido.dart';
+import 'package:floricultura/screens/historico_de_pedidos.dart';
 import 'package:floricultura/screens/home.dart';
 import 'package:floricultura/screens/informacoes_usuario.dart';
-import 'package:floricultura/screens/main_page.dart';
 import 'package:floricultura/screens/pagamento.dart';
 import 'package:floricultura/screens/produto_page.dart';
+import 'package:floricultura/screens/search.dart';
 import 'package:floricultura/widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'screens/catalogo.dart';
@@ -27,14 +28,15 @@ class MyApp extends StatelessWidget{
         '/': (context) => const LoginScreen(),
         '/login': (context) => const LoginScreen(),
         '/cadastro': (context) => const Cadastro(),
+        '/search' :(context) => Search(),
         '/info-usuario': (context) => const InfoUsuario(),
         '/catalogo': (context) => const CatalogoPage(),
         '/home' : (context) => const Home(),
-        '/main': (context) => const MainPage(),
         '/carrinho': (context) => const Carrinho(),
         '/detalhes-pedido': (context) => const DetalhesPedido(),
         '/produto-page': (context) => const ProdutoPage(),
         '/pagamento' : (context) => const Pagamento(),
+        '/meus-pedidos' :(context) => const HistoricoPedidos(),
       }, 
     );
   }

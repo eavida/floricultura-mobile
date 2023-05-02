@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'botao_imagem.dart';
+
 class CarrinhoItem extends StatelessWidget {
   final String nome;
   final String imagem;
   final double preco;
 
-  const CarrinhoItem({Key? key, required this.nome, required this.imagem, required this.preco}) : super(key: key);
+  const CarrinhoItem(
+      {Key? key, required this.nome, required this.imagem, required this.preco})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +25,11 @@ class CarrinhoItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: ClipRRect(borderRadius: BorderRadius.circular(8.0),
-              child: Image.asset(
-                imagem,
-                fit: BoxFit.cover,
-              ),
-              )
-    
+            BotaoImagem(
+              imagem: imagem,
+              screenName: 'produto-page',
+              height: 100,
+              width: 100,
             ),
             Text(
               nome,
@@ -47,7 +42,7 @@ class CarrinhoItem extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                 Text(
+                Text(
                   'R\$$precoArredondado',
                   style: const TextStyle(
                     fontSize: 16,

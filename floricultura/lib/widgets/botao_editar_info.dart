@@ -14,7 +14,6 @@ class BotaoEditarInfo extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 5),
       alignment: Alignment.centerRight,
       child: FractionallySizedBox(
-        alignment: Alignment.centerRight,
         widthFactor: 0.4,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

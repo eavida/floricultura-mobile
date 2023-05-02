@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:floricultura/widgets/produto.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
 
+import '../widgets/navigation_bar.dart';
+import '../widgets/widget_texto.dart';
+
 class CatalogoPage extends StatelessWidget {
   const CatalogoPage({super.key});
 
@@ -20,16 +23,10 @@ class CatalogoPage extends StatelessWidget {
           children: [
             const Retornar(),
             const SizedBox(height: 0.5),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                "Orquídeas",
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.w200,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-              ),
+            const WidgetTexto(
+              text: 'Orquídeas',
+              tamanho: 30,
+              alignment: Alignment.center,
             ),
             Expanded(
               child: GridView.count(
@@ -84,6 +81,7 @@ class CatalogoPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }

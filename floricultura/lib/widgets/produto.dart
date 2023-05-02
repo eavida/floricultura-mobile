@@ -1,3 +1,4 @@
+import 'package:floricultura/widgets/botao_imagem.dart';
 import 'package:flutter/material.dart';
 
 class ProductWidget extends StatelessWidget {
@@ -33,10 +34,12 @@ class ProductWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              child: Image.asset(             
-                image,
-                fit: BoxFit.contain,
-              ),
+              child: BotaoImagem(
+                imagem: image,
+                screenName: 'produto-page',
+                height: 80,
+                width: 80,
+              )
             ),
             const SizedBox(height: 8.0),
             Container(

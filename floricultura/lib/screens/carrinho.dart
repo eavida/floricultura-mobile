@@ -1,10 +1,13 @@
 import 'package:floricultura/widgets/botao_geral.dart';
 import 'package:floricultura/widgets/campo_texto.dart';
+import 'package:floricultura/widgets/divisor.dart';
 import 'package:floricultura/widgets/icone.dart';
 import 'package:floricultura/widgets/preco_item.dart';
+import 'package:floricultura/widgets/widget_texto.dart';
 import 'package:flutter/material.dart';
 import 'package:floricultura/widgets/botao_retornar.dart';
 import '../widgets/carrinho_item.dart';
+import '../widgets/navigation_bar.dart';
 
 class Carrinho extends StatelessWidget {
   const Carrinho({super.key});
@@ -22,16 +25,10 @@ class Carrinho extends StatelessWidget {
           ),
           child: Column(children: [
             const Icone(iconData: Icons.shopping_cart),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                "Carrinho",
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w100,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-              ),
+            const WidgetTexto(
+              text: 'Carrinho',
+              tamanho: 30,
+              alignment: Alignment.center,
             ),
             const SizedBox(height: 25),
             const CarrinhoItem(
@@ -59,31 +56,33 @@ class Carrinho extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              height: 1,
-              color: Colors.black,
-              child: const SizedBox.expand(),
+            const LinhaDivisora(),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              child: PrecoItem(
+                texto: 'Subtotal:',
+                valor: 360.00,
+              ),
             ),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: PrecoItem(texto: 'Subtotal:', valor: 360.00,),
+              child: PrecoItem(
+                texto: 'Desconto:',
+                valor: 10.00,
+              ),
             ),
+            const SizedBox(height: 20),
+            const LinhaDivisora(),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: PrecoItem(texto: 'Desconto:', valor: 10.00,),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              height: 1,
-              color: Colors.black,
-              child: const SizedBox.expand(),
-            ),
-            const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: PrecoItem(texto: 'Total:', valor: 350.00, fontSize: 25,),
+              child: PrecoItem(
+                texto: 'Total:',
+                valor: 350.00,
+                fontSize: 25,
+              ),
             ),
             const SizedBox(height: 20),
             Container(
@@ -94,11 +93,13 @@ class Carrinho extends StatelessWidget {
               ),
               child: const Botao(
                 text: 'Comprar',
+                screenName: 'pagamento',
               ),
             ),
-          ]),
+          ],),
         ),
       ),
+      bottomNavigationBar: const NavBar(),
     );
   }
 }
